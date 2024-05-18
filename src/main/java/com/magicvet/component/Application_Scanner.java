@@ -18,10 +18,12 @@ public class Application_Scanner {
                 System.out.println("Adding a new pet. ");
 
                 pet pet = petService.regicsetNewPet();
-                client.setPet(pet);
-                pet.setOwnerName(client.getFirstName() + " " + client.getSecondName());
-                System.out.println("Pet has been added. ");
 
+                if (pet != null) {
+                    client.setPet(pet);
+                    pet.setOwnerName(client.getFirstName() + " " + client.getSecondName());
+                    System.out.println("Pet has been added. ");
+                }
                 System.out.println(client);
             }
         }
