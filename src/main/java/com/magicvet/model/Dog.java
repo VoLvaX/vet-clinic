@@ -13,7 +13,7 @@ public class Dog extends pet {
     public Dog() { }
 
     public Dog(String size) {
-        
+        this.size = size;
     }
 
     public void setSize(String size) {
