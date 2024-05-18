@@ -1,6 +1,6 @@
 package main.java.com.magicvet.model;
 
-public class pet {
+public abstract class pet {
 
     private String type;
     private String sex;
