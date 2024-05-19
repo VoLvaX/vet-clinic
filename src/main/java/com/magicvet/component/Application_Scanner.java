@@ -17,7 +17,7 @@ public class Application_Scanner {
             if (client != null) {
                 System.out.println("Adding a new pet. ");
 
-                pet pet = petService.regicsetNewPet();
+                pet pet = petService.registerNewPet();
                 client.setPet(pet);
                 pet.setOwnerName(client.getFirstName() + " " + client.getSecondName());
                 System.out.println("Pet has been added. ");
