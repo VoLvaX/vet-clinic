@@ -1,5 +1,7 @@
 package main.java.com.magicvet.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Client {
@@ -7,7 +9,7 @@ public class Client {
     private String firstName;
     private String secondName;
     private String email;
-    private pet pet;
+    private List<pet> pets = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -15,7 +17,7 @@ public class Client {
                 + "\n\tfirstName = " + firstName
                 + ", secondName = " + secondName
                 + ", email = " + email
-                + ",\n\tpet = " + pet
+                + ",\n\tpets = " + pets
                 + "\n}";
     }
 
@@ -27,12 +29,12 @@ public class Client {
         return Objects.equals(firstName, client.firstName)
                 && Objects.equals(secondName, client.secondName)
                 && Objects.equals(email, client.email)
-                && Objects.equals(pet, client.pet);
+                && Objects.equals(pets, client.pets);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, secondName, email, pet);
+        return Objects.hash(firstName, secondName, email, pets);
     }
 
     public void setFirstName(String firstName) {
@@ -59,13 +61,18 @@ public class Client {
         return email;
     }
 
-    public main.java.com.magicvet.model.pet getPet() {
-        return pet;
+    public List<main.java.com.magicvet.model.pet> getPet() {
+        return pets;
     }
 
-    public void setPet(main.java.com.magicvet.model.pet pet) {
-        this.pet = pet;
+    public void setPet(List<main.java.com.magicvet.model.pet> pets) {
+        this.pets = pets;
     }
+    public void addPet(pet pet) {
+        pets.add(pet);
+    }
+
+
 }
 
 
