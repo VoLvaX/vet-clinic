@@ -11,12 +11,15 @@ public class Client {
     private String email;
     private List<pet> pets = new ArrayList<>();
 
+    private Location location;
+
     @Override
     public String toString() {
         return "Client {"
                 + "\n\tfirstName = " + firstName
                 + ", secondName = " + secondName
                 + ", email = " + email
+                + ", location = " + location
                 + ",\n\tpets = " + pets
                 + "\n}";
     }
@@ -61,17 +64,28 @@ public class Client {
         return email;
     }
 
-    public List<main.java.com.magicvet.model.pet> getPet() {
+    public List<main.java.com.magicvet.model.pet> getPets() {
         return pets;
     }
 
-    public void setPet(List<main.java.com.magicvet.model.pet> pets) {
+    public void setPets(List<main.java.com.magicvet.model.pet> pets) {
         this.pets = pets;
     }
     public void addPet(pet pet) {
         pets.add(pet);
     }
 
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public enum Location {
+        KYIV, LVIV, ODESA
+    }
 
 }
 
