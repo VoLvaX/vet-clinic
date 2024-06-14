@@ -68,6 +68,9 @@ public abstract class pet {
     public LocalDateTime getRegistrationDate() {
         return registrationDate;
     }
+
+
+
 }
 
 
